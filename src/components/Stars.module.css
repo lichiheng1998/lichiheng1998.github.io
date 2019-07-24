@@ -1,0 +1,18 @@
+.star {
+    font-size: 10px;
+    margin: 0;
+    color: #fed12d;
+}
+
+@media only screen and (min-width: 768px) {
+    .star {
+
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .star {
+        margin: 0 5px 0 0;
+        font-size: 15px;
+    }
+}
