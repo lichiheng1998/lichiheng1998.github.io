@@ -18,25 +18,20 @@ class Languages extends React.Component {
               breakpoint: 768,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3
               }
             },
-            {
-              breakpoint: 10000,
-              settings: {
-                slidesToShow: 6
-              }
-            }
         ];
         this.settings = {
             dots: false,
             infinite: true,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 6,
             responsive: this.responsive,
             swipeToSlide: true,
             autoplay: true,
             autoplaySpeed: 2000,
+            mobileFirst: true,
+            arrows: false,
         }
     }
 
