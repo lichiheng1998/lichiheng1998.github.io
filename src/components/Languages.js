@@ -3,10 +3,14 @@ import styles from "./Planguages.module.css";
 import RollingCard from "./RollingCard";
 import languages from "../models/languages";
 import Slider from "react-slick";
+import Slide from "react-reveal/Slide";
 
 class Languages extends React.Component {
     constructor(){
         super();
+        this.state = {
+            render: false,
+        };
         this.responsive = [
             {
               breakpoint: 1024,
@@ -36,19 +40,26 @@ class Languages extends React.Component {
     }
 
     componentDidMount(){
+        this.setState({
+            render: true
+        });
     }
 
     render(){
-        let component = Object.keys(languages).map((lang)=>{
-            return (
-                <RollingCard key={lang} name={lang} num={languages[lang].proficiency} imgUrl={require(`../images/${lang}.png`)} />
-            );
-        });
+        let component = null;
+        if(this.state.render){
+            component = Object.keys(languages).map((lang)=>{
+                return (
+                    <RollingCard key={lang} name={lang} num={languages[lang].proficiency} imgUrl={require(`../images/${lang}.png`)} />
+                );
+            });
+        }
+
         return (
                 <div className={styles.wrapper}>
                     <Slider {...this.settings}>
-                          {component}
-                    </Slider>
+                        {component}
+                    </ Slider>
                 </div>
         );
     }

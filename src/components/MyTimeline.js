@@ -5,6 +5,7 @@ import eduList from "../models/educations";
 import expList from "../models/experiences";
 import Events from "./Events";
 import Title from "./Title";
+import Fade from 'react-reveal/Fade';
 
 const MyTimeline = () => {
     let component = eduList.map((education) => {
@@ -21,7 +22,7 @@ const MyTimeline = () => {
               <h4 className="vertical-timeline-element-subtitle">{education.organization}</h4>
               {description}
               <p style={{fontWeight: 600}}>{education.grade}</p>
-              <Events events={expList[education.id]}/>
+                <Events events={expList[education.id]}/>
             </VerticalTimelineElement>
         );
     });
@@ -29,9 +30,9 @@ const MyTimeline = () => {
     return (
         <div className="section" style={{backgroundColor: "#eee", zIndex: 2}}>
             <Title title="Education Background and Experiences" />
-            <VerticalTimeline style={{margin: "0 auto"}}>
-                {component}
-            </VerticalTimeline>
+                <VerticalTimeline style={{margin: "0 auto"}}>
+                    {component}
+                </VerticalTimeline>
         </div>
     );
 }

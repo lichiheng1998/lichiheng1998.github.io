@@ -3,6 +3,7 @@ import styles from "./Footer.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faFacebook, faLinkedin, faWeixin } from '@fortawesome/free-brands-svg-icons';
 import QRcode from "../images/QRcode.jpg";
+import LightSpeed from 'react-reveal/LightSpeed';
 
 export default class Footer extends React.Component{
     constructor(){
@@ -20,10 +21,12 @@ export default class Footer extends React.Component{
         return (
             <footer className={`section has-text-centered ${styles.footer}`}>
               <div className={`${styles.icons}`}>
-                <a href="https://github.com/lichiheng1998"><FontAwesomeIcon className={styles.icon} icon={faGithub} /></a>
-                <a href="https://www.facebook.com/profile.php?id=100010010053738"><FontAwesomeIcon className={styles.icon} icon={faFacebook} /></a>
-                <a href="www.linkedin.com/in/chiheng-li-b6663a18b"><FontAwesomeIcon className={styles.icon} icon={faLinkedin} /></a>
-                <FontAwesomeIcon onClick={this.toggle} className={styles.icon} icon={faWeixin} />
+                <LightSpeed right>
+                    <a href="https://github.com/lichiheng1998"><FontAwesomeIcon className={styles.icon} icon={faGithub} /></a>
+                    <a href="https://www.facebook.com/profile.php?id=100010010053738"><FontAwesomeIcon className={styles.icon} icon={faFacebook} /></a>
+                    <a href="www.linkedin.com/in/chiheng-li-b6663a18b"><FontAwesomeIcon className={styles.icon} icon={faLinkedin} /></a>
+                    <FontAwesomeIcon onClick={this.toggle} className={styles.icon} icon={faWeixin} />
+                </LightSpeed>
               </div>
                 <span className={styles.email}></span>
                 <br/>

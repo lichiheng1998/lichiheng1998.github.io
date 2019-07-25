@@ -16,7 +16,7 @@ const DevEnv = (props) => {
 
     let component = Object.keys(props.data).map((name) => {
         return (
-            <div keys={name}>{name}: <Stars isSpin={false} num={props.data[name].proficiency} /></div>
+            <div key={name}>{name}: <Stars isSpin={false} num={props.data[name].proficiency} /></div>
         );
     });
 

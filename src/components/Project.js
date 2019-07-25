@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCaretRight} from '@fortawesome/free-solid-svg-icons';
 import {wrapper} from "./Planguages.module.css";
 import Slider from "react-slick";
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
@@ -58,7 +58,7 @@ let components = Object.keys(projects).map((key) => {
         <div key={key} className={`hero is-fullheight custom-hero ${styles.container}`}>
             <div id={styles.newBreak} className={`columns ${wrapper}`}>
                 <div style={{order: textOrder}} className="column is-half">
-                    <Slide {...slideConfig}>
+                    <Fade {...slideConfig}>
                         <div className={`container ${styles.textContainer}`}>
                             <h3 className={`${styles.title}`}>{projects[key].title}</h3>
                             <div className={`buttons ${styles.buttons}`}>
@@ -71,8 +71,8 @@ let components = Object.keys(projects).map((key) => {
                                    <FontAwesomeIcon icon={faCaretRight} /> View Project
                                 </a>
                             </div>
-                    </div>
-                    </Slide>
+                        </div>
+                    </Fade>
                 </div>
                 <div style={{order: demoOrder,textAlign: "center"}} className="column">
                     <div style={{display:"inline-block", position: "relative"}}>

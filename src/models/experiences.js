@@ -1,11 +1,11 @@
 const expList = {
     0: [
         {
-            tag: "Hack the Valley3",
+            tag: "Hack the Valley 3",
             date: "",
-            description: "Team up with 3 teamates. Self-taught programming language swift and the framework Arkit within 48 hours. " +
-            "Develop an app which remembers the locations of the daily supplies of the users, and help them to find "+
-            "their missing items with AR technology. The app is demoed to the judger."
+            description: "Teamed up with 3 teamates. Self-taught the programming language swift and the framework Arkit within 48 hours. " +
+            "Developed an app which helps the users find their missing item by remembering the locations and display the "+
+            "accurate positions of the items in real time images."
         }
     ],
     1: [

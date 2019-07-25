@@ -11,17 +11,17 @@ const Stars = (props) => {
     let component = [];
     for(; z > 0; z--){
         component.push(
-            <FontAwesomeIcon style={{maxWidth: 50}} spin={props.isSpin} className={styles.star} keys={z} icon={star}/>
+            <FontAwesomeIcon style={{maxWidth: 50}} spin={props.isSpin} className={styles.star} key={z} icon={star}/>
         );
     }
     if(isHalf){
         component.push(
-            <FontAwesomeIcon style={{maxWidth: 50}} className={styles.star} keys={z} icon={halfStar}/>
+            <FontAwesomeIcon style={{maxWidth: 50}} className={styles.star} key={z} icon={halfStar}/>
         );
     }
     for(let i = 0; i < extra; i++){
         component.push(
-            <FontAwesomeIcon style={{maxWidth: 50}} className={styles.star} keys={z - i - 1} icon={eStar}/>
+            <FontAwesomeIcon style={{maxWidth: 50}} className={styles.star} key={z - i - 1} icon={eStar}/>
         );
     }
     return component;

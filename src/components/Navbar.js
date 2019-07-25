@@ -37,8 +37,8 @@ class Navbar extends React.Component{
     render(){
         let extra = this.state.isActive ? "is-active" : "";
         return (
-            <header class="headroom is-fixed-top">
-                <nav class="navbar">
+            <header className="headroom is-fixed-top">
+                <nav className="navbar">
                 <div className="navbar-brand">
                   <a className="navbar-item is-size-5">
                     <p style={{fontFamily: "'Roboto', sans-serif", fontWeight: 900}}>Adam's Page</p>

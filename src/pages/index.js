@@ -9,6 +9,9 @@ import Project from "../components/Project.js";
 import ProjectBanner from "../components/ProjectBanner";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
 
 const IndexPage = () => (
     <div>

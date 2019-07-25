@@ -6,9 +6,11 @@ const Events = (prop) => {
         return null;
     }
 
+    let i = 1;
     let eventComponent = prop.events.map(event => {
+        i = i + 1;
         return (
-                <Experience event={event}/>
+            <Experience key={i} event={event}/>
         )
     });
 

@@ -25,10 +25,10 @@ export default class Experience extends React.Component{
     render(){
         let extra = this.state.isActive ? " is-active" : "";
         return [
-            <span className="button is-link is-size-6-tablet is-size-7-mobile" onClick={this.openModal}>
+            <span key={1} className="button is-link is-size-6-tablet is-size-7-mobile" onClick={this.openModal}>
                 {this.props.event.tag}
             </span>,
-            <div className={"modal" + extra}>
+            <div key={2} className={"modal" + extra}>
                  <div className="modal-background"></div>
                  <div className="modal-card">
                       <header className="modal-card-head">

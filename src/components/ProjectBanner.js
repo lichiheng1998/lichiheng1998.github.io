@@ -1,4 +1,5 @@
 import React from "react";
+import Zoom from 'react-reveal/Zoom';
 import projectBanner from "../images/projectBanner.jpg";
 import { Parallax } from 'react-parallax';
 
@@ -12,7 +13,9 @@ const ProjectBanner = () => {
             }}
         >
             <section className="hero is-fullheight">
-                <p style={{margin: "auto", color: "white"}} className="is-size-2">Project Showcases</p>
+                <Zoom clear>
+                    <p style={{margin: "auto", color: "white"}} className="is-size-2">Project Showcases</p>
+                </Zoom>
             </section>
         </Parallax>
     );
